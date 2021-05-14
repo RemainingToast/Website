@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -9,12 +9,13 @@
     <link href="style.css" rel="stylesheet"/>
 
     <script src="script/jQuery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="index.js" defer type="text/javascript"></script>
     <script src="script/jquery.scrollTo.js" type="text/javascript" charset="utf-8"></script>
     <script src="script/slide.js" type="text/javascript" charset="utf-8"></script>
     <title>2b2t Australia</title>
 </head>
 
-<body onload="javascript:recp();recp2()" style="background-image: url('assets/1.png');background-position: center;background-repeat: no-repeat">
+<body onload="javascript:recp();recp2()" style="background-image: url('assets/render.png');background-position: center;background-repeat: no-repeat">
 <!-- Holder, this container is used to position everything in the centre of the users screen -->
 <div class="holder">
     <!-- Start of header -->
@@ -32,16 +33,14 @@
     <!-- End of navigation -->
 
     <!-- Container 1, static donation -->
-    <div class="container con1">
+    <div class="container con1 text">
         2b2t.com.au runs on automated payments from its paypal account, which needs at least $85 AUD for it to pay for itself at the end of every month.
         <p>If donations aren't reached for any month, I will attempt to pay the rest of the amount if it isn't a significant amount. Otherwise, I will be publicly releasing the world and shut the server down.</p>
-        <p>No bullshit included in donations needed, exact prices and information written out in the '<a href="#area2" style="color: black">INFO</a>' tab. I do not intend to gain profit out of this.</p>
-        <p>It is possible to be "Rewarded" for donations. Head over to '<a href="https://donate.2b2t.com.au" style="color: black">donate.2b2t.com.au</a>' for more information on packages.</p>
+        <p>No bullshit included in donations needed, exact prices and information written out in the '<a href="#area2" class="big-text">INFO</a>' tab. I do not intend to gain profit out of this.</p>
+        <p>It is possible to be "Rewarded" for donations. Head over to '<a href="https://donate.2b2t.com.au" class="big-text">donate.2b2t.com.au</a>' for more information on packages.</p>
         <div style="height: 200px;"></div>
         <p>The server bill is paid on the 1st of every month.</p>
-        May: $85 / $85 AUD<br/>
-        June: $15 / $85 AUD<br/>
-        (Extra rolls over)
+        <p>$85 AUD / Month</p>
         <div class="spacer0"></div>
         <form action="https://www.paypal.com/donate" method="post" target="_top">
             <input type="hidden" name="hosted_button_id" value="NL97H67WRYBA2" />
@@ -56,15 +55,15 @@
         <div id="wrapper">
             <div id="mask">
                 <!-- Main holder, this is what you see on page load -->
-                <div id="main" class="item">
+                <div id="main" class="item text">
                     <a id="main1"></a>
                     <div class="post-header">2b2t Australia (2b2t.com.au)</div>
                     <div class="post-content">
                         2b2t Australia is an alternative to the popular minecraft server 2b2t, that promises its players vanilla survival gameplay with PvP encapsulated inside a never ending world with no rules. The IP is 2b2t.com.au.<br/><br/>
-                        <div class="content-header">
-                            9813 player(s) have spawned at least once in the server.<br/>
-                            The Map is 0 years, 3 months and 22 days old and has a file size of 277.95 GB
-                        </div>
+                    <div class="content-header">
+                        10188 player(s) have spawned at least once in the server.<br/>
+                        The Map is 3 months and 24 days old and has a file size of 285.15GB
+                    </div>
                     </div>
                     <div class="spacer7"></div>
                     <div class="post-header">News / Announcements</div>
@@ -85,18 +84,18 @@
                             - $15 AUD One Month Priority Queue will allow you to skip the queue faster, this will last one month with the optional subscription.<br/><br/>
 
                         </div>
-                        If you wish to be rewarded for donating you will need to purchase from <a href="https://donate.2b2t.com.au/" style="color: black;">donate.2b2t.com.au</a>.
+                        If you wish to be rewarded for donating you will need to purchase from <a href="https://donate.2b2t.com.au/" class="bold-text">donate.2b2t.com.au</a>.
                     </div>
                     <div class="spacer7"></div>
                     <div class="post-header">Analytics Website</div>
                     <div class="post-content">
-                        You can check server/player analytics at <a href="https://stats.2b2t.com.au" style="color: black; ">https://stats.2b2t.com.au</a></br>
+                        You can check server/player analytics at <a href="https://stats.2b2t.com.au" class="big-text">https://stats.2b2t.com.au</a></br>
                     </div>
                     <div class="spacer7"></div>
                     <div class="post-header">Community Links</div>
                     <div class="post-content">
-                        Subreddit: <a href="https://www.reddit.com/r/2b2tAU/" style="color: black; ">https://www.reddit.com/r/2b2tAU/</a></br>
-                        Discord: <a href="https://discord.gg/fuQ8rTekWb" style="color: black;">https://discord.gg/fuQ8rTekWb</a></br>
+                        Subreddit: <a href="https://www.reddit.com/r/2b2tAU/" class="big-text">https://www.reddit.com/r/2b2tAU/</a></br>
+                        Discord: <a href="https://discord.gg/fuQ8rTekWb" class="big-text">https://discord.gg/fuQ8rTekWb</a></br>
                     </div>
                     <div class="spacer7"></div>
                     <div class="post-header">Help grow the server</div>
@@ -111,8 +110,7 @@
                 <!-- Main end -->
 
                 <!-- This is additional content, you'll see this when you click the corresponding name in nav -->
-                <div id="area2" class="item">
-                    <a name="area3"></a>
+                <div id="area2" class="item text">
                     <div class="post-header">Donation Rewards</div>
                     <div class="post-content">
                         <div class="post-content">
@@ -127,7 +125,7 @@
                                 - $15 AUD One Month Priority Queue will allow you to skip the queue faster, this will last one month with the optional subscription.<br/><br/>
 
                             </div>
-                            If you wish to be rewarded for donating you will need to purchase from <a href="https://donate.2b2t.com.au/" style="color: black;">donate.2b2t.com.au</a>.
+                            If you wish to be rewarded for donating you will need to purchase from <a href="https://donate.2b2t.com.au/" class="big-text">donate.2b2t.com.au</a>.
                         </div>
                     </div>
                     <div class="spacer7"></div>
@@ -143,8 +141,7 @@
                         <br>Currently this is the best deal I can find for a dedicated server in Australia but if you believe you've found cheaper hosting, let me know in an email.
                     </div>
                 </div>
-                <div id="area3" class="item">
-                    <a name="area4"></a>
+                <div id="area3" class="item text">
                     <div class="post-header">Contact</div>
                     <div class="post-content">
                         Contact the operator of 2b2t Australia:</br>
