@@ -9,7 +9,6 @@
     <link href="style.css" rel="stylesheet"/>
 
     <script src="script/jQuery.js" type="text/javascript" charset="utf-8"></script>
-    <script src="index.js" defer type="text/javascript"></script>
     <script src="script/jquery.scrollTo.js" type="text/javascript" charset="utf-8"></script>
     <script src="script/slide.js" type="text/javascript" charset="utf-8"></script>
     <title>2b2t Australia</title>
@@ -61,8 +60,31 @@
                     <div class="post-content">
                         2b2t Australia is an alternative to the popular minecraft server 2b2t, that promises its players vanilla survival gameplay with PvP encapsulated inside a never ending world with no rules. The IP is 2b2t.com.au.<br/><br/>
                     <div class="content-header">
-                        10188 player(s) have spawned at least once in the server.<br/>
-                        The Map is 3 months and 24 days old and has a file size of 285.15GB
+                        <script>
+                            function startUpdate() {
+                                const players = document.getElementById('players');
+                                const years = document.getElementById('years');
+                                const months = document.getElementById('months');
+                                const days = document.getElementById('days');
+                                const size = document.getElementById('size');
+
+                                fetch('stats.php').then(function (response) {
+                                    return response.json();
+                                }).then(function (data) {
+                                    players.textContent = data.players;
+                                    years.textContent = data.years;
+                                    months.textContent = data.months;
+                                    days.textContent = data.days;
+                                    size.textContent = data.size;
+                                })
+                            }
+                            
+                            document.addEventListener('DOMContentLoaded', function () {
+                                startUpdate();
+                            })
+                        </script>
+                        <a id="players">0</a> player(s) have spawned at least once in the server.<br/>
+                        The Map is <a id="years">0</a> years, <a id="months">0</a> months and <a id="days">0</a> days old and has a file size of <a id="size">0</a>GB
                     </div>
                     </div>
                     <div class="spacer7"></div>
@@ -104,8 +126,6 @@
                         <div style="height: 15px"></div>
                         <iframe style="width:728px;height:90px;max-width:100%;border:none;display:block;margin:auto" src="https://namemc.com/server/2b2t.com.au/embed" width="728" height="90"></iframe>
                     </div>
-<!--                    <div style="height: 135px"></div>-->
-<!--                    Website last updated the 9th of May 2021.-->
                 </div>
                 <!-- Main end -->
 
