@@ -61,7 +61,7 @@
                         2b2t Australia is an alternative to the popular minecraft server 2b2t, that promises its players vanilla survival gameplay with PvP encapsulated inside a never ending world with no rules. The IP is 2b2t.com.au.<br/><br/>
                     <div class="content-header">
                         <script>
-                            function startUpdate() {
+                            function update() {
                                 const players = document.getElementById('players');
                                 const years = document.getElementById('years');
                                 const months = document.getElementById('months');
@@ -78,9 +78,11 @@
                                     size.textContent = data.size;
                                 })
                             }
-                            
+
                             document.addEventListener('DOMContentLoaded', function () {
-                                startUpdate();
+                                setInterval(function () {
+                                    update();
+                                }, 500);
                             })
                         </script>
                         <a id="players">0</a> player(s) have spawned at least once in the server.<br/>
