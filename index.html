@@ -8,13 +8,14 @@
     <link rel="icon" type="image/png" href="assets/icon.png"/>
     <link href="style.css" rel="stylesheet"/>
 
-    <script src="script/jQuery.js" type="text/javascript" charset="utf-8"></script>
-    <script src="script/jquery.scrollTo.js" type="text/javascript" charset="utf-8"></script>
-    <script src="script/slide.js" type="text/javascript" charset="utf-8"></script>
+    <script src="stats.js" type="application/javascript" charset="UTF-8"></script>
+    <script src="script/jQuery.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="script/jquery.scrollTo.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="script/slide.js" type="text/javascript" charset="UTF-8"></script>
     <title>2b2t Australia</title>
 </head>
 
-<body onload="javascript:recp();recp2()" style="background-image: url('assets/render.png');background-position: center;background-repeat: no-repeat">
+<body onloadstart="startUpdate()" style="background-image: url('assets/render.png'); background-position: center; background-repeat: no-repeat;">
 <!-- Holder, this container is used to position everything in the centre of the users screen -->
 <div class="holder">
     <!-- Start of header -->
@@ -43,8 +44,8 @@
         <div class="spacer0"></div>
         <form action="https://www.paypal.com/donate" method="post" target="_top">
             <input type="hidden" name="hosted_button_id" value="NL97H67WRYBA2" />
-            <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_AU/i/scr/pixel.gif" width="1" height="1" />
+            <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img src="https://www.paypal.com/en_AU/i/scr/pixel.gif" width="1" height="1"  alt=""/>
         </form>
     </div>
     <!-- Container 1 end -->
@@ -60,33 +61,10 @@
                     <div class="post-content">
                         2b2t Australia is an alternative to the popular minecraft server 2b2t, that promises its players vanilla survival gameplay with PvP encapsulated inside a never ending world with no rules. The IP is 2b2t.com.au.<br/><br/>
                     <div class="content-header">
-                        <script>
-                            function update() {
-                                const players = document.getElementById('players');
-                                const years = document.getElementById('years');
-                                const months = document.getElementById('months');
-                                const days = document.getElementById('days');
-                                const size = document.getElementById('size');
-
-                                fetch('stats.php').then(function (response) {
-                                    return response.json();
-                                }).then(function (data) {
-                                    players.textContent = data.players;
-                                    years.textContent = data.years;
-                                    months.textContent = data.months;
-                                    days.textContent = data.days;
-                                    size.textContent = data.size;
-                                })
-                            }
-
-                            setInterval(function () {
-                                update();
-                            }, 200);
-                        </script>
-                        <a id="players">10253</a> player(s) have spawned at least once in the server.<br/>
-                        The Map is <a id="years">0</a> years, <a id="months">3</a> months and <a id="days">24</a> days old and has a file size of <a id="size">285.95</a> GB (Updates Automatically)
+                        <a id="players">N/A</a> player(s) have spawned at least once in the server.<br/>
+                        The Map is <a id="years">N/A</a> years, <a id="months">N/A</a> months and <a id="days">N/A</a> days old and has a file size of <a id="size">N/A</a> GB
                         <br/><br/>
-                        Server Started 20/01/21 (Jan 20th 2021)
+                        Server Started 20/01/21 (Jan 20th 2021) (Stats Update Automatically, Might Take a Moment to Load)
                     </div>
                     </div>
                     <div class="spacer7"></div>
