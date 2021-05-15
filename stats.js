@@ -1,21 +1,17 @@
 function update() {
-    const players = document.getElementById('players');
-    const years = document.getElementById('years');
-    const months = document.getElementById('months');
-    const days = document.getElementById('days');
-    const size = document.getElementById('size');
-
-    fetch('stats.php').then(function (response) { return response.json(); }).then(function (data) {
-        players.textContent = data.players;
-        years.textContent = data.years;
-        months.textContent = data.months;
-        days.textContent = data.days;
-        size.textContent = data.size;
+    fetch('stats.json').then(response => response.json()).then(data => {
+        document.all['players'].textContent = String(data.players);
+        document.all['years'].textContent   = String(data.years);
+        document.all['months'].textContent  = String(data.months);
+        document.all['size'].textContent    = String(data.size);
+        document.all['days'].textContent    = String(data.days);
     });
 }
 
-update()
-
-function startUpdate(){
-    setInterval(function () { update(); }, 200);
-}
+window.onload = function() {
+    update();
+    setTimeout(function() {
+         document.body.style.backgroundImage = 'url("/assets/renderl.jpg")';
+    }, 1000);
+    setInterval(update, 60000);
+};
