@@ -6,14 +6,36 @@ body {
     font-size: 11px;
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    -moz-white-space: revert;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-white-space: pre-line;
 }
 
 .holder {
     width: 990px;
     margin: 5% auto;
+}
+
+.cols {
+    display: inline-flex;
 }
 
 .header {

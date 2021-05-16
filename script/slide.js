@@ -25,7 +25,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
         });
 
         $(window).resize(function () {
-            resizePanel();
+//          resizePanel();
         });
 
     });

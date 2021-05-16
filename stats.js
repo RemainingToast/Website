@@ -8,10 +8,17 @@ function update() {
     });
 }
 
+// preload image
+(new Image).src = '/assets/render.jpg';
+(new Image).src = '/assets/renderl.jpg';
+
 window.onload = function() {
     update();
     setTimeout(function() {
-         document.body.style.backgroundImage = 'url("/assets/renderl.jpg")';
+         document.body.parentElement.style.backgroundImage = 'url("/assets/renderl.jpg")';
+         setTimeout(function() {
+             document.body.style.backgroundImage = '';
+         }, 1000);
     }, 1000);
     setInterval(update, 60000);
 };
