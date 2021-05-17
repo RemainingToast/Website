@@ -4,7 +4,7 @@ function update() {
     document.all['years'].textContent   = String('The Map is ' + data.years + ' years, ');
     document.all['months'].textContent  = String(data.months + ' months and ');
     document.all['days'].textContent    = String(data.days + ' days old and has a file size of ');
-    document.all['size'].textContent    = String(data.size + 'GB');
+    document.all['size'].textContent    = String(data.size + ' GB');
 }
 
 // preload image
