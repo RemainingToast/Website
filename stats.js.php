@@ -12,7 +12,7 @@ function update() {
     let bal = JSON.parse(atob("<?php echo base64_encode(file_get_contents('./balance.json')); ?>"))
 
     document.all['bal-amount'].textContent = String('$' + bal.balance + ' / $85 USD');
-    document.all['bal-month'].textContent = date("F", strtotime('m'));
+    document.all['bal-month'].textContent  = String(bal.month);
 }
 
 // Background Image
