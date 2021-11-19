@@ -3,11 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="description" content="2b2t.com.au is an Australian clone of the biggest and most popular minecraft Anarchy Server!"/>
-    <meta name="keywords" content="4chan, v, vg, anarchy, minecraft, server, vanilla, 2B2T.net, 2b2t.net, 2b2t, PvP, pvp, Facepunch, facepunch, number, one, somethingawful, something, awful, 2b2t.org, Australia, 2b2t.com, Aussie Anarchy, 2b2t Australia, 2b2t Au, 2b2t AUS, Australian Anarchy, Australian Anarchy Server, AAS, Australia Anarchy, hacking, toast, slavelabour, fit, fitmc, rusher, fax, faxmachine, virl"/>
+    <meta name="keywords" content="4chan, v, vg, anarchy, minecraft, server, vanilla, 2B2T.net, 2b2t.net, 2b2t, PvP, pvp, Facepunch, facepunch, number, one, somethingawful, something, awful, 2b2t.org, Australia, 2b2t.com, Aussie Anarchy, 2b2t Australia, 2b2t Au, 2b2t AUS, Australian Anarchy, Australian Anarchy Server, AAS, Australia Anarchy, hacking, toast, slavelabour, fit, fitmc, rusher, fax, faxmachine, virl, the oldest anarchy server in australia, oldest, australia, anarchy, server, oldest australia, real anarchy, 2b2t, digmc"/>
 
     <link rel="icon" type="image/png" href="assets/icon.png"/>
     <link href="style.css" rel="stylesheet"/>
 
+    <script src="balance.js.php" type="application/javascript" charset="UTF-8"></script>
     <script src="stats.js.php" type="application/javascript" charset="UTF-8"></script>
     <script src="script/jQuery.js" type="text/javascript" charset="UTF-8"></script>
     <script src="script/jquery.scrollTo.js" type="text/javascript" charset="UTF-8"></script>
@@ -30,25 +31,24 @@
 
     <!-- Start of navigation -->
     <div class="navigation">
-        <a href="#main" class="panel selected">MAIN</a> <span class="raquo">&raquo;</span> <a href="#area2" class="panel">DONATE</a> <span class="raquo">&raquo;</span> <a href="#area3" class="panel">CONTACT</a>
+        <a href="#main" class="panel">MAIN</a> <span class="raquo">&raquo;</span> <a class="panel" href="https://discord.gg/fuQ8rTekWb" target="_blank">DISCORD</a> <span class="raquo">&raquo;</span> <a href="https://www.reddit.com/r/2b2tAU/" target="_blank" class="panel">REDDIT</a>
     </div>
     <!-- End of navigation -->
 
     <div class="cols">
     <!-- Container 1, static donation -->
     <div class="container con1 text">
-        2b2t.com.au runs on automated payments from its paypal account, which needs at least $85 AUD for it to pay for itself at the end of every month.
-        <p>If donations aren't reached for any month, I will attempt to pay the rest of the amount if it isn't a significant amount. Otherwise, I will be publicly releasing the world as a torrent and shutting the server down.</p>
-        <p>No bullshit included in donations needed, exact prices and information written out in the '<a href="#area2" class="big-text">DONATE</a>' tab. I do not intend to gain profit out of this.</p>
-        <p>It is possible to be "Rewarded" for donations. Head over to '<a href="https://donate.2b2t.com.au" class="big-text">donate.2b2t.com.au</a>' for more information on packages.</p>
-        <p>If you wish to donate with crypto you can go <a href="https://commerce.coinbase.com/checkout/bea160a3-92a9-43df-85b5-8835b91fce34" class="big-text">here</a></p>
-        <div style="height: 165px;"></div>
-        <p>The server bill is paid on the 1st of every month.</p>
-        <p>$85 AUD / Month</p>
+        2b2tau runs on automated payments it at least $85 USD for it to pay for itself at the end of every month.
+        <p>If donations aren't reached for any month, I will attempt to pay the rest of the amount if it isn't a significant amount.</p>
+        <p><strong>Otherwise, I will be publicly releasing the world as a torrent and shutting the server down.</strong></p>
+        <p>No bullshit included in donations needed, exact prices and information written are out. I do not intend to gain profit out of this.</p>
+        <p>Any roll over donations will go into building a custom server to ensure the longevity of the server.</p>
+        <div style="height: 230px;"></div>
+        <p>The server bill is paid at the end of each month.</p>
+        <p><a id="bal-amount">Amount</a> <a id="bal-month">Month</a>.</p>
         <a class="custom-dbox-popup" href="https://donorbox.org/keep-2b2t-australia-running">
             <img src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif"/>
         </a>
-
 <!--        <form action="https://www.paypal.com/donate" method="post" target="_top">-->
 <!--            <input type="hidden" name="hosted_button_id" value="NL97H67WRYBA2" />-->
 <!--            <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />-->
@@ -66,50 +66,53 @@
                     <a id="main1"></a>
                     <div class="post-header">2b2t Australia (2Bogans2Tradies)</div>
                     <div class="post-content">
-                        2b2t Australia is an alternative to the popular minecraft server 2b2t, that promises its players vanilla survival gameplay with PvP encapsulated inside a never ending world with <strong>no rules</strong>.<br/><br/>
+                        2b2t Australia is the oldest anarchy server in Australia, that promises its players vanilla survival gameplay with pvp encapsulated inside a never ending world with <strong>no rules, no map resets and no p2w</strong>. Anything goes, do as you will. <br/><br/>
                     <div class="content-header">
-                        IP(s): 2b2t.com.au, 2b2t.org.au, 2b2tau.xyz, toastmc.dev
+                        IP(s): 2b2t.com.au, 2b2t.org.au
                         <br/>
                         <br/>
                         Server Started 20/01/21 (Jan 20th 2021)
                         <br/>
                         <br/>
-                        <a id="players">Loading...</a>
+                        <a id="players">
+                            Loading...
+                        </a>
                         <br/>
                         <a id="years"></a><a id="months"></a><a id="days"></a><a id="size"></a>
                     </div>
                     </div>
                     <div class="spacer7"></div>
-                    <div class="post-header">News / Announcements</div>
+<!--                    <div class="post-header">News - August</div>-->
+<!--                    <div class="post-content">-->
+<!--                        Increased mob spawns, render distance and improved performance greatly<br>-->
+<!--                        Working actively on increasing playable slots and eventual 1.16 update<br><br>-->
+<!--                        <b>Full Changelog(s):</b>-->
+<!--                        <a href="https://www.reddit.com/r/2b2tAU/comments/p2ewme/july_august_news/" target="_blank">Here</a> and-->
+<!--                        <a href="https://www.reddit.com/r/2b2tAU/comments/p4xjik/updated_queue_whats_to_come/" target="_blank">Here</a>-->
+<!--                    </div>-->
+<!--                    <div class="post-content">-->
+<!--                        RemainingToast has left 2b2t Australia forever and is no longer in charge.<br>-->
+<!--                        The server will continue like normal though and will be operated by an anonymous friend.-->
+<!--                    </div>-->
+                    <div style="height: 10px"></div>
+                    <div class="post-header">Hardware Price</div>
                     <div class="post-content">
-                        To stay updated with server updates/news and announcements or the community join the <a href="https://discord.gg/fuQ8rTekWb" class="big-text">discord</a></br>
+                        The minecraft server computer costs around $83 USD a month. The hardware is an Intel Core i7-7700k CPU, RAM 32GB and 2x HDD SATA 4TB in soft raid. The extra couple dollars goes towards yearly domain cost. That's $85 USD.<br><br>
+                        Currently this is the best deal I can find for a dedicated server in Australia but if you believe you've found cheaper hosting, let me know in an email.<br><br>
+                        Any roll over donations will go into building a custom server to ensure the longevity of the server.
                     </div>
-                    <div class="spacer7"></div>
-                    <div class="post-header">Donation Rewards</div>
+                    <div style="height: 10px"></div>
+                    <div class="post-header">Contact</div>
                     <div class="post-content">
-                        <div class="content-header">You can donate for</div>
-                        <div class="post-content">
-                            - $2 AUD Server MOTD which is cycled together with many others. The only rule is no advertising/links.</br></br>
-
-                            - $1 AUD One Day Priority Queue will allow you to skip the queue faster, this will last one day.</br></br>
-
-                            - $5 AUD One Week Priority Queue will allow you to skip the queue faster, this will last one week.</br></br>
-
-                            - $15 AUD One Month Priority Queue will allow you to skip the queue faster, this will last one month with the optional subscription.<br/><br/>
-
-                        </div>
-                        If you wish to be rewarded for donating you will need to purchase from <a href="https://donate.2b2t.com.au/" class="bold-text">donate.2b2t.com.au</a>.
-                    </div>
-                    <div class="spacer7"></div>
-                    <div class="post-header">Analytics Website</div>
-                    <div class="post-content">
-                        You can check server/player analytics at <a href="https://stats.2b2t.com.au" class="big-text">https://stats.2b2t.com.au</a></br>
+                        Contact the operator of 2b2t Australia:</br>
+                        E-mail: 2b2tau@gmail.com</br>
                     </div>
                     <div class="spacer7"></div>
                     <div class="post-header">Community Links</div>
                     <div class="post-content">
-                        Subreddit: <a href="https://www.reddit.com/r/2b2tAU/" class="big-text">https://www.reddit.com/r/2b2tAU/</a></br>
-                        Discord: <a href="https://discord.gg/fuQ8rTekWb" class="big-text">https://discord.gg/fuQ8rTekWb</a></br>
+                        <b>These are mostly managed by the community, to contact the manager send an email.</b><br><br>
+                        Subreddit: <a href="https://www.reddit.com/r/2b2tAU/" class="big-text">reddit.com/r/2b2tau</a></br>
+                        Discord: <a href="https://discord.gg/australia" class="big-text">discord.gg/australia</a> or <a href="https://discord.gg/fuQ8rTekWb" class="big-text">discord.gg/fuQ8rTekWb</a></br>
                     </div>
                     <div class="spacer7"></div>
                     <div class="post-header">Help grow the server</div>
@@ -117,35 +120,34 @@
                         Word of mouth, inviting your friends and creating groups are great ways of growing the server. </br> I also encourage you to like the server on name mc:
                         <div style="height: 15px"></div>
                         <iframe style="width:728px;height:90px;max-width:100%;border:none;display:block;margin:auto" src="https://namemc.com/server/2b2t.com.au/embed" width="728" height="90"></iframe>
+<!--                        <iframe style="width:728px;height:90px;max-width:100%;border:none;display:block;margin:auto" src="https://namemc.com/server/2b2t.org.au/embed" width="728" height="90"></iframe>-->
                     </div>
                 </div>
                 <!-- Main end -->
 
                 <!-- This is additional content, you'll see this when you click the corresponding name in nav -->
                 <div id="area2" class="item text">
-                    <div class="post-header">Donation Rewards</div>
+                    <div class="post-header">Donate Information</div>
                     <div class="post-content">
-                        <div class="post-content">
-                            <div class="content-header">You can donate for</div>
-                            <div class="post-content">
-                                - $2 AUD Server MOTD which is cycled together with many others. The only rule is no advertising/links.</br></br>
-
-                                - $1 AUD One Day Priority Queue will allow you to skip the queue faster, this will last one day.</br></br>
-
-                                - $5 AUD One Week Priority Queue will allow you to skip the queue faster, this will last one week.</br></br>
-
-                                - $15 AUD One Month Priority Queue will allow you to skip the queue faster, this will last one month with the optional subscription.<br/><br/>
-
-                            </div>
-                            If you wish to be rewarded for donating you will need to purchase from <a href="https://donate.2b2t.com.au/" class="big-text">donate.2b2t.com.au</a>.
-                        </div>
+                        2b2t.com.au runs on automated payments from its bank account, which needs at least $85 AUD for it to pay for itself at the end of every month.
+                        <p>If donations aren't reached for any month, I will attempt to pay the rest of the amount if it isn't a significant amount. Otherwise, I will be publicly releasing the world as a torrent and shutting the server down.</p>
+                        <p>No bullshit included in donations needed, exact prices and information written out below. I do not intend to gain profit out of this.</p>
+                        <p>It is possible to be "Rewarded" for donations. Head '<a href="https://donate.2b2t.com.au" class="big-text">here</a>' for more information on packages.</p>
+                        <p>If you wish to donate with crypto you can go <a href="https://commerce.coinbase.com/checkout/bea160a3-92a9-43df-85b5-8835b91fce34" class="big-text">here</a></p>
+                        <p>The server bill is paid on the 1st of every month.</p>
+                        <p>$85 AUD / Month</p>
                     </div>
                     <div class="spacer7"></div>
-                    <div class="post-header">Cryptocurrency</div>
+                    <div class="post-header">Donation Rewards</div>
                     <div class="post-content">
-                        <div>
-                            <a class="donate-with-crypto" href="https://commerce.coinbase.com/checkout/bea160a3-92a9-43df-85b5-8835b91fce34"></a>
-                            <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
+                        <div class="content-header">Priority Queue - One Month</div>
+                        <div class="post-content">
+                            For $15 AUD you will receive priority queue which will allow you to skip the queue faster, <br>
+                        </div>
+                        <div class="spacer"></div>
+                        <div class="content-header">Server MOTD - Permanent</div>
+                        <div class="post-content">
+                            Server MOTD which is cycled together with many others. The only rule is no advertising/links. <br>
                         </div>
                     </div>
                     <div class="spacer7"></div>
@@ -154,20 +156,20 @@
                         The minecraft server computer costs $83 AUD a month. The hardware is an Intel Core i7-7700k CPU, RAM 32GB and 2x HDD SATA 4TB in soft raid. The extra couple dollars goes towards yearly domain cost. That's $85 AUD.</br>
                         <br>Currently this is the best deal I can find for a dedicated server in Australia but if you believe you've found cheaper hosting, let me know in an email.
                     </div>
-                </div>
-                <div id="area3" class="item text">
+                    <div class="spacer7"></div>
                     <div class="post-header">Contact</div>
                     <div class="post-content">
                         Contact the operator of 2b2t Australia:</br>
                         E-mail: 2b2tau@gmail.com</br>
-                        Discord: RemainingToast#0001
-                    </div>
-                    <div class="spacer3"></div>
-                    <div class="post-header">Discord Widget</div>
-                    <div class="post-content">
-                        <iframe src="https://discord.com/widget?id=801552028504555550&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                     </div>
                 </div>
+<!--                <div id="area3" class="item text">-->
+<!--                    <div class="post-header">Contact</div>-->
+<!--                    <div class="post-content">-->
+<!--                        Contact the operator of 2b2t Australia:</br>-->
+<!--                        E-mail: 2b2tau@gmail.com</br>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <!-- End of additional content -->
                 <!-- Lets clear our styled floats so the holder scales correctly -->
                 <div class="clear"></div>
